@@ -1,0 +1,27 @@
+.blog-index {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  background-image: url("../img/vector/blog-indexbg.svg");
+  background-repeat: repeat-x;
+  background-size: 100% 1181px;
+  background-position: center bottom;
+}
+
+.blog-index__title {
+  margin-bottom: 70px;
+}
+
+.blog-index__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-index__card {
+  margin-bottom: 50px;
+}
+
+.blog-index__btn {
+  width: 195px;
+}

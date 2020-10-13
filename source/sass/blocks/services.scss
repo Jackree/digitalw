@@ -1,0 +1,36 @@
+.services {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 90px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -110px;
+    z-index: -1;
+    width: 100%;
+    height: 1465px;
+    background-image: url("../img/vector/servprojbg.svg");
+    background-size: 100% 1466px;
+  }
+}
+
+.services__title {
+  margin-bottom: 75px;
+}
+
+.services__cards {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services__item {
+  margin-right: 75px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+

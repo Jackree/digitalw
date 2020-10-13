@@ -1,0 +1,73 @@
+.competence {
+  padding-top: 220px;
+  padding-bottom: 200px;
+  background: url("../img/vector/competenceup.svg") top / 100% 300px repeat-x, url("../img/vector/competencedown.svg") left 0 bottom -1px / 100% 300px repeat-x, url("../img/competencelines.png") center / cover no-repeat, linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+}
+
+.competence__title {
+  margin: 0 0 70px 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.competence__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.competence__column {
+  width: 113px;
+}
+
+.competence__column-title {
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.competence__list {
+  @include reset-list;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    left: 3px;
+    top: 5px;
+    height: calc(100% - 15px);
+    background-color: #ffffff;
+  }
+}
+
+.competence__item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 14px;
+  color: #ffffff;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: 0;
+    top: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.competence__item-remark {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15px;
+}

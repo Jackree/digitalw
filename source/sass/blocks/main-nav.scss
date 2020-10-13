@@ -1,0 +1,17 @@
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  color: #ffffff;
+}
