@@ -4,6 +4,7 @@
   padding: 25px 22px;
   box-shadow: 0px 4px 15px rgba(#8f5fdc, 0.2);
   border-radius: 18px;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: top 80px center;
 
@@ -18,6 +19,18 @@
   &--backend {
     background-image: url("../img/vector/backend.svg");
     background-position: top 90px center;
+  }
+
+  &--devops {
+    background-image: url("../img/vector/devops.svg");
+  }
+
+  &--ui {
+    background-image: url("../img/vector/design.svg");
+  }
+
+  &--managment {
+    background-image: url("../img/vector/managment.svg");
   }
 }
 

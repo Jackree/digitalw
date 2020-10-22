@@ -109,14 +109,14 @@ exports.html = html;
 const js = () => {
   return gulp
     .src("source/js/**/*.js")
-    .pipe(gulp.dest("build/js"))
-    .pipe(uglify())
-    .pipe(
-      rename(function (path) {
-        path.basename += ".min";
-      })
-    )
     .pipe(gulp.dest("build/js"));
+    // .pipe(uglify())
+    // .pipe(
+    //   rename(function (path) {
+    //     path.basename += ".min";
+    //   })
+    // )
+    // .pipe(gulp.dest("build/js"));
 };
 
 exports.js = js;
@@ -148,9 +148,9 @@ const refresh = (done) => {
 
 const watcher = () => {
   gulp.watch("source/js/*.js", gulp.series(js, refresh));
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles, refresh));
+  gulp.watch("source/sass/**/*.scss", gulp.series(images, styles, refresh));
   gulp.watch("source/img/icon-*.svg", gulp.series(sprite, html, refresh));
-  gulp.watch("source/*.html").on("change", gulp.series(html, refresh));
+  gulp.watch("source/*.html").on("change", gulp.series(images, html, refresh));
 };
 
 const build = gulp.series(

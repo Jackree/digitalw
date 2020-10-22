@@ -1,12 +1,13 @@
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 5;
+
+  padding-top: 38px;
+  padding-bottom: 20px;
 }
 
 .header__wrapper {
   display: flex;
-  padding-top: 38px;
-  padding-bottom: 20px;
   align-items: center;
   justify-content: space-between;
 }

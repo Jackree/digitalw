@@ -1,0 +1,27 @@
+.feedback {
+  position: relative;
+  z-index: 1;
+  padding-top: 75px;
+  padding-bottom: 155px;
+  background: url("../img/vector/formwave.svg") left bottom -100px / 100% 700px no-repeat, linear-gradient(220.86deg, #9851DF 4.06%, #54D6BF 90.75%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 380px;
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
+  }
+}
+
+.feedback__title {
+  margin-bottom: 70px;
+}
+
+.feedback__form {
+  max-width: 740px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}

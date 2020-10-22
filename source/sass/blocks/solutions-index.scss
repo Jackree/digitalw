@@ -29,18 +29,19 @@
   height: 40px;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
   &--prev {
     left: 180px;
     top: 285px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     background: url("../img/vector/arrowbtn.svg") 14px center no-repeat, linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
   }
 
   &--next {
     right: 180px;
     top: 285px;
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.15);
     background: url("../img/vector/arrowbtn.svg") 14px center no-repeat, linear-gradient(40.86deg, #54D6BF 4.06%, #9851DF 90.76%);
     transform: rotate(180deg);
   }

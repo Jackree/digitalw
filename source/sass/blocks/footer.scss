@@ -1,6 +1,149 @@
 .footer {
-  margin-top: 155px;
-  height: 230px;
+  padding-top: 40px;
+  padding-bottom: 25px;
   background: #292929;
+  color: #ffffff;
+}
+
+.footer__logo-wrapper {
+  width: 155px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.footer__social {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: -25px;
+}
+
+.footer__social-item {
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  width: 23px;
+  height: 23px;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+
+  &--vk {
+    background-image: url("../img/vector/vkfooter.svg");
+  }
+
+  &--fb {
+    background-image: url("../img/vector/fbfooter.svg");
+  }
+
+  &--inst {
+    background-image: url("../img/vector/instfooter.svg");
+  }
+
+  &--tw {
+    background-image: url("../img/vector/twfooter.svg");
+  }
+
+  &--gh {
+    background-image: url("../img/vector/ghfooter.svg");
+  }
+}
+
+.footer__contacts {
+  position: relative;
+  top: -22px;
+}
+
+.footer__contacts-title {
+  margin: 0 0 25px 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.footer__contacts-text {
+  margin: 0;
+}
+
+.footer__contacts-link {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+
+.footer__confidencial-link {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.footer__language {
+  margin-top: 33px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.footer__language-option {
+  color: #ffffff;
+
+  &--current {
+    font-weight: 700;
+  }
+}
+
+.footer__navigation {
+  margin-top: 30px;
+}
+
+.footer__navigation-list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__navigation-item {
+  position: relative;
+  margin-right: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 7px;
+    right: -16px;
+    top: 8px;
+    background-color: #ffffff;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    &::after {
+      width: 0;
+    }
+  }
+}
+
+.footer__navigation-link {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
   color: #ffffff;
 }

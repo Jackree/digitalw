@@ -1,0 +1,99 @@
+.process {
+  padding-top: 90px;
+}
+
+.process__title {
+  margin-bottom: 70px;
+}
+
+.process__list {
+  max-width: 740px;
+  @include reset-list;
+  margin-left: 70px;
+}
+
+.process__item {
+  padding-left: 170px;
+  margin-bottom: 70px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 15px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--intro {
+    &::before {
+      background-image: url("../img/vector/processintro.svg");
+    }
+  }
+
+  &--spec {
+    &::before {
+      background-image: url("../img/vector/processspec.svg");
+    }
+  }
+
+  &--estimate {
+    &::before {
+      background-image: url("../img/vector/processestimate.svg");
+    }
+  }
+
+  &--plan {
+    &::before {
+      background-image: url("../img/vector/processplan.svg");
+    }
+  }
+
+  &--ui {
+    &::before {
+      background-image: url("../img/vector/processui.svg");
+    }
+  }
+
+  &--develop {
+    &::before {
+      background-image: url("../img/vector/processdevelop.svg");
+    }
+  }
+
+  &--quality {
+    &::before {
+      background-image: url("../img/vector/processquality.svg");
+    }
+  }
+
+  &--delivery {
+    &::before {
+      background-image: url("../img/vector/processdelivery.svg");
+    }
+  }
+
+  &--support {
+    &::before {
+      background-image: url("../img/vector/processsupport.svg");
+    }
+  }
+
+}
+
+.process__item-title {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.process__description {
+  margin: 0;
+  font-weight: 300;
+}

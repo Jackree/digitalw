@@ -1,0 +1,52 @@
+.page-intro {
+  min-height: 470px;
+  margin-top: -100px;
+  padding-top: 170px;
+  background: linear-gradient(220.86deg, #9851DF 4.06%, #54D6BF 90.76%);
+
+  &--services .page-intro__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 242px;
+      height: 240px;
+      right: -310px;
+      bottom: -84px;
+      opacity: 0.5;
+      background-image: url("../img/vector/introservices.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.page-intro__wrapper {
+  max-width: 690px;
+  position: relative;
+}
+
+.page-intro__title {
+  margin: 0 0 25px 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #ffffff;
+}
+
+.page-intro__description {
+  margin: 0 0 30px 0;
+  color: #ffffff;
+}
+
+.page-intro__btn {
+  width: 195px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 30px;
+}

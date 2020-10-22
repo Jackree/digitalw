@@ -1,0 +1,25 @@
+.service-cards {
+  padding-top: 70px;
+  padding-bottom: 40px;
+
+  background-image: url("../img/vector/servicecards.svg");
+  background-position: top -390px left;
+  background-repeat: no-repeat;
+}
+
+.service-cards__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-cards__item {
+  margin-right: 34px;
+  margin-bottom: 50px;
+
+  &:nth-child(4n),
+  &:last-child {
+    margin-right: 0;
+  }
+}

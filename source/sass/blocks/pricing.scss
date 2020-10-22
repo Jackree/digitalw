@@ -1,0 +1,87 @@
+.pricing {
+  padding-top: 235px;
+  padding-bottom: 230px;
+  background: url("../img/vector/competenceup.svg") left top / 100% 200px no-repeat, url("../img/vector/pricingdown.svg") left bottom / 100% 170px no-repeat, url("../img/pricingbg.png") left top / 100%, linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+}
+
+.pricing__title {
+  margin: 0 0 60px 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pricing__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing__model {
+  &--left {
+    margin-right: 100px;
+    text-align: right;
+  }
+}
+
+.pricing__model-title {
+  margin: 0 0 35px 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #ffffff;
+}
+
+.pricing__model-title span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.pricing__list {
+  @include reset-list;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 50px);
+    top: 10px;
+    left: -50px;
+    background-color: #ffffff;
+  }
+
+  &--left {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.pricing__item {
+  margin-bottom: 25px;
+  position: relative;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -57.5px;
+    top: 7px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.pricing__list--left .pricing__item {
+  &::before {
+    display: none;
+  }
+}
