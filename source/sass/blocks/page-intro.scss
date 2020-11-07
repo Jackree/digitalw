@@ -17,11 +17,98 @@
       background-repeat: no-repeat;
     }
   }
+
+  &--projects .page-intro__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 223px;
+      height: 223px;
+      right: -310px;
+      bottom: -35px;
+      opacity: 0.5;
+      background-image: url("../img/vector/introprojects.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--solutions .page-intro__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 195px;
+      height: 248px;
+      right: -310px;
+      bottom: 0;
+      opacity: 0.5;
+      background-image: url("../img/vector/introsolutions.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--blog .page-intro__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 224px;
+      height: 224px;
+      right: -310px;
+      bottom: -75px;
+      opacity: 0.5;
+      background-image: url("../img/vector/introblog.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 400px;
+    padding-bottom: 40px;
+
+    &--services .page-intro__wrapper {
+      &::after {
+        width: 208px;
+        height: 208px;
+        top: -225px;
+        left: calc(50% - 104px);
+      }
+    }
+
+    &--projects .page-intro__wrapper {
+      &::after {
+        width: 182px;
+        height: 195px;
+        top: -225px;
+        left: calc(50% - 105px);
+      }
+    }
+
+    &--solutions .page-intro__wrapper {
+      &::after {
+        width: 183px;
+        height: 234px;
+        top: -250px;
+        left: calc(50% - 91.5px);
+      }
+    }
+
+    &--blog .page-intro__wrapper {
+      &::after {
+        width: 194px;
+        height: 194px;
+        top: -225px;
+        left: calc(50% - 105px);
+      }
+    }
+  }
 }
 
 .page-intro__wrapper {
   max-width: 690px;
   position: relative;
+
+  @media (max-width: $tabletwidth) {
+    max-width: 100%;
+  }
 }
 
 .page-intro__title {
@@ -30,11 +117,26 @@
   font-size: 48px;
   line-height: 57px;
   color: #ffffff;
+
+  @media (max-width: $tabletwidth) {
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobilewidth) {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .page-intro__description {
-  margin: 0 0 30px 0;
+  margin: 0 0 35px 0;
   color: #ffffff;
+
+  @media (max-width: $tabletwidth) {
+    text-align: center;
+  }
 }
 
 .page-intro__btn {
@@ -49,4 +151,8 @@
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 30px;
+
+  @media (max-width: $tabletwidth) {
+    margin: 0 auto;
+  }
 }

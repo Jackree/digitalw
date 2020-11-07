@@ -2,6 +2,12 @@
   padding-top: 220px;
   padding-bottom: 200px;
   background: url("../img/vector/competenceup.svg") top / 100% 300px repeat-x, url("../img/vector/competencedown.svg") left 0 bottom -1px / 100% 300px repeat-x, url("../img/competencelines.png") center / cover no-repeat, linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 70px;
+    padding-bottom: 110px;
+    background: url("../img/vector/wavemobileup.svg") top / 100% 80px repeat-x, url("../img/vector/wavemobile.svg") left 0 bottom -1px / 100% 72px repeat-x, linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+  }
 }
 
 .competence__title {
@@ -11,15 +17,29 @@
   line-height: 28px;
   color: #ffffff;
   text-align: center;
+
+  @media (max-width: $tabletwidth) {
+    margin: 0 0 40px 0;
+  }
 }
 
 .competence__wrapper {
   display: flex;
   justify-content: space-between;
+  overflow: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .competence__column {
-  width: 113px;
+  margin-right: 30px;
+  flex-shrink: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .competence__column-title {

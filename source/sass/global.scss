@@ -39,6 +39,14 @@ a {
   max-width: 1070px;
   margin: 0 auto;
   padding: 0 10px;
+
+  @media (max-width: $tabletwidth) {
+    max-width: $tabletwidth;
+  }
+
+  @media (max-width: $mobilewidth) {
+    padding: 0 15px;
+  }
 }
 
 .section-title {
@@ -48,4 +56,14 @@ a {
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (max-width: $tabletwidth) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

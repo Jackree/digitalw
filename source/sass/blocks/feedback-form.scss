@@ -2,16 +2,45 @@
   padding: 50px 55px;
   box-shadow: 0px 5px 25px rgba(144, 96, 219, 0.15);
   border-radius: 10px;
+
+  @media (max-width: $tabletwidth) {
+    padding: 30px 20px;
+  }
 }
 
 .feedback-form__header {
   display: flex;
   justify-content: center;
   margin-bottom: 35px;
+
+  @media (max-width: $mobilewidth) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.feedback-form__logo-wrapper {
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 10px;
+  }
+}
+
+.feedback-form__logo {
+  width: 53px;
+  height: 53px;
+
+  @media (max-width: $mobilewidth) {
+    width: 85px;
+    height: 85px;
+  }
 }
 
 .feedback-form__heading {
   margin-left: 12px;
+
+  @media (max-width: $mobilewidth) {
+    margin-left: 0;
+  }
 }
 
 .feedback-form__title {
@@ -19,6 +48,11 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 33px;
+
+  @media (max-width: $mobilewidth) {
+    font-weight: 400;
+    text-align: center;
+  }
 }
 
 .feedback-form__phone {
@@ -26,6 +60,10 @@
   font-size: 12px;
   font-weight: 300;
   line-height: 14px;
+
+  @media (max-width: $mobilewidth) {
+    display: none;
+  }
 }
 
 .feedback-form__wrapper {
@@ -39,6 +77,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+  @media (max-width: $tabletwidth) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .feedback-form__input {
@@ -100,4 +143,12 @@
   line-height: 16px;
   text-align: center;
   color: #b3b3b3;
+}
+
+.feedback-form__usersurname,
+.feedback-form__select,
+.feedback-form__file {
+  @media (max-width: $mobilewidth) {
+    display: none;
+  }
 }

@@ -4,10 +4,55 @@
 
   padding-top: 38px;
   padding-bottom: 20px;
+
+  @media (max-width: $tabletwidth) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header__burger {
+  display: none;
+
+  @media (max-width: $tabletwidth) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/vector/burger.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobilewidth) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header__logo {
+  @media (max-width: $tabletwidth) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobilewidth) {
+    width: 125px;
+    height: 22px;
+  }
+}
+
+.header__nav {
+  @media (max-width: $tabletwidth) {
+    display: none;
+  }
 }

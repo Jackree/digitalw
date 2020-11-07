@@ -3,10 +3,22 @@
   padding-bottom: 220px;
   margin-top: -100px;
   background: url("../img/vector/wave.svg") bottom / 100% 210px repeat-x, url("../img/herobg.png") no-repeat 65%, linear-gradient(220.86deg, #9851DF 4.06%, #54D6BF 90.76%);
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 370px;
+    padding-bottom: 120px;
+
+    background: url("../img/vector/wavemobile.svg") bottom -15px left/ 100% 72px repeat-x, url("../img/herobgmobile.png") no-repeat top 42px left / 375px 477px, linear-gradient(220.86deg, #9851DF 4.06%, #54D6BF 90.76%);
+  }
 }
 
 .hero__wrapper {
   max-width: 640px;
+
+
+  @media (max-width: $tabletwidth) {
+    min-width: 100%;
+  }
 }
 
 .hero__title {
@@ -16,6 +28,19 @@
   font-weight: bold;
   line-height: 57px;
   color: #ffffff;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .hero__desc {
@@ -24,6 +49,19 @@
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 .hero__bottom {
@@ -31,6 +69,11 @@
   justify-content: space-between;
   align-items: center;
   max-width: 540px;
+
+  @media (max-width: $tabletwidth) {
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 .hero__link {
@@ -46,6 +89,10 @@
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 30px;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 40px;
+  }
 }
 
 .hero__socials {
@@ -55,6 +102,10 @@
   align-items: center;
   justify-content: space-between;
   min-width: 265px;
+
+  @media (max-width: $mobilewidth) {
+    justify-content: space-evenly;
+  }
 }
 
 .hero__socials-link {
@@ -91,5 +142,32 @@
     background-image: url("../img/vector/gh.svg");
     width: 33px;
     height: 32px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    &--vk {
+      width: 27px;
+      height: 15px;
+    }
+
+    &--fb {
+      width: 11px;
+      height: 24px;
+    }
+
+    &--inst {
+      width: 21px;
+      height: 21px;
+    }
+
+    &--tw {
+      width: 23px;
+      height: 19px;
+    }
+
+    &--gh {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

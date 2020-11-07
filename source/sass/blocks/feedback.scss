@@ -14,10 +14,28 @@
     top: 0;
     background-color: #ffffff;
   }
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 40px;
+    padding-bottom: 0;
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .feedback__title {
   margin-bottom: 70px;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    display: none;
+  }
 }
 
 .feedback__form {

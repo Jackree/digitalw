@@ -6,6 +6,15 @@
   background-position: top -40px left;
   background-size: 100% 845px;
   background-repeat: no-repeat;
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $mobilewidth) {
+    background-image: none;
+  }
 }
 
 .faq__title {
@@ -29,11 +38,20 @@
   background-image: url("../img/vector/faqarrow.svg");
   background-repeat: no-repeat;
   background-position: right center;
+
+  @media (max-width: $mobilewidth) {
+    font-weight: 400;
+  }
 }
 
 .faq__answer {
   font-weight: 300;
   color: #000000;
+
+  @media (max-width: $mobilewidth) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .faq__item > .faq__answer {

@@ -13,10 +13,30 @@
 }
 
 .main-nav__link {
+  position: relative;
   color: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 100%;
+    }
+  }
 
   &--current {
     position: relative;
+
     &::after {
       content: "";
       position: absolute;

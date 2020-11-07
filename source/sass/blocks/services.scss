@@ -12,25 +12,41 @@
     height: 1465px;
     background-image: url("../img/vector/servprojbg.svg");
     background-size: 100% 1466px;
+
+    @media (max-width: $mobilewidth) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tabletwidth) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }
 
 .services__title {
   margin-bottom: 75px;
+
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 25px;
+  }
 }
 
 .services__cards {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .services__item {
-  margin-right: 75px;
+  margin-bottom: 50px;
 
-  &:last-child {
-    margin-right: 0;
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 25px;
   }
 }
-

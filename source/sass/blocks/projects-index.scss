@@ -1,10 +1,23 @@
 .projects-index {
   padding-top: 50px;
   padding-bottom: 100px;
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }
 
 .projects-index__title {
   margin-bottom: 80px;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 30px;
+  }
 }
 
 .projects-index__card {
@@ -13,9 +26,17 @@
   column-gap: 35px;
   min-height: 300px;
   margin-bottom: 90px;
+  align-items: center;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 45px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+    justify-items: center;
   }
 }
 
@@ -27,14 +48,30 @@
 
 .projects-index__text {
   position: relative;
+  min-height: 100%;
   padding-top: 12px;
   padding-bottom: 70px;
+
+  @media (max-width: $tabletwidth) {
+    max-width: 495px;
+    text-align: center;
+  }
 }
 
 .projects-index__card-title {
   margin: 0;
   font-size: 48px;
   line-height: 57px;
+
+  @media (max-width: $tabletwidth) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .projects-index__card-tags {
@@ -42,16 +79,36 @@
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
+
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 .projects-index__card-desc {
   margin: 0;
   font-weight: 300;
+
+  @media (max-width: $mobilewidth) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .projects-index__card-btn {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   width: 195px;
   padding: 12px 50px;
+
+  @media (max-width: $tabletwidth) {
+    left: calc(50% - 95px);
+  }
 }

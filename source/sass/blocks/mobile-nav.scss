@@ -1,0 +1,132 @@
+.mobile-nav {
+  display: none;
+
+  @media (max-width: $tabletwidth) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    width: 190px;
+    height: calc(100vh - 62px);
+    padding-left: 25px;
+    padding-bottom: 40px;
+    bottom: 0;
+    background-color: #292929;
+    color: #ffffff;
+    transform: translateX(-190px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+
+  @media (max-width: $mobilewidth) {
+    height: calc(100vh - 44px);
+    top: 44px;
+  }
+
+  &--opened {
+    @media (max-width: $tabletwidth) {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.mobile-nav__menu-list {
+  @include reset-list;
+  padding-top: 25px;
+}
+
+.mobile-nav__menu-item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mobile-nav__menu-link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.mobile-nav__bottom {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 25px);
+    left: -25px;
+    height: 1px;
+    background-color: #ffffff;
+  }
+}
+
+.mobile-nav__language {
+  margin-top: 33px;
+  margin-bottom: 25px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mobile-nav__language-option {
+  color: #ffffff;
+
+  &--current {
+    font-weight: 700;
+  }
+}
+
+.mobile-nav__copyright {
+  margin-bottom: 25px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mobile-nav__social {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-nav__social-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.mobile-nav__social-link {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+
+  &--vk {
+    background-image: url("../img/vector/vkfooter.svg");
+  }
+
+  &--fb {
+    background-image: url("../img/vector/fbfooter.svg");
+  }
+
+  &--inst {
+    background-image: url("../img/vector/instfooter.svg");
+  }
+
+  &--tw {
+    background-image: url("../img/vector/twfooter.svg");
+  }
+
+  &--gh {
+    background-image: url("../img/vector/ghfooter.svg");
+  }
+}

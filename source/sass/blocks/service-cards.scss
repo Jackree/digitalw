@@ -5,6 +5,10 @@
   background-image: url("../img/vector/servicecards.svg");
   background-position: top -390px left;
   background-repeat: no-repeat;
+
+  @media (max-width: $mobilewidth) {
+    background-image: none;
+  }
 }
 
 .service-cards__list {
@@ -15,11 +19,15 @@
 }
 
 .service-cards__item {
-  margin-right: 34px;
   margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 
-  &:nth-child(4n),
-  &:last-child {
-    margin-right: 0;
+  @media (max-width: $tabletwidth) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    margin-bottom: 25px;
   }
 }

@@ -5,10 +5,19 @@
   background-repeat: repeat-x;
   background-size: 100% 1181px;
   background-position: center bottom;
+
+  @media (max-width: $tabletwidth) {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    background-image: none;
+  }
 }
 
 .blog-index__title {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .blog-index__wrapper {
