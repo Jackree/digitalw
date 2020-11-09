@@ -5,6 +5,10 @@
   padding-top: 38px;
   padding-bottom: 20px;
 
+  @media (min-width: $tabletwidth) {
+    transition: background-color 0.5s, transform 0.5s;
+  }
+
   @media (max-width: $tabletwidth) {
     position: fixed;
     top: 0;
@@ -12,6 +16,22 @@
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &--fixed {
+    @media (min-width: $tabletwidth) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transform: translateY(-18px);
+      background-color: rgba(33, 33, 33, 0.5);
+    }
+  }
+
+  &--fixed + main {
+    @media (min-width: $tabletwidth) {
+      padding-top: 100px;
+    }
   }
 }
 
@@ -23,21 +43,6 @@
 
 .header__burger {
   display: none;
-
-  @media (max-width: $tabletwidth) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-image: url("../img/vector/burger.svg");
-    background-repeat: no-repeat;
-  }
-
-  @media (max-width: $mobilewidth) {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 .header__logo {

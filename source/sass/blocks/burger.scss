@@ -1,0 +1,42 @@
+.burger {
+  @media (max-width: $tabletwidth) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (max-width: $mobilewidth) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.burger__middle,
+.burger__up,
+.burger__down {
+  position: relative;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 16.6%;
+  border-radius: 12.5px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.burger--close .burger__middle {
+  width: 0;
+  left: 50%;
+}
+
+.burger--close .burger__up {
+  transform: rotate(45deg) translateX(17%) translateY(225%);
+  width: calc(100% * 1.30);
+}
+
+.burger--close .burger__down {
+  transform: rotate(-45deg) translateX(15%) translateY(-225%);
+  width: calc(100% * 1.30);
+}

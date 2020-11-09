@@ -25,7 +25,7 @@
       width: 223px;
       height: 223px;
       right: -310px;
-      bottom: -35px;
+      top: 0;
       opacity: 0.5;
       background-image: url("../img/vector/introprojects.svg");
       background-repeat: no-repeat;
@@ -39,7 +39,7 @@
       width: 195px;
       height: 248px;
       right: -310px;
-      bottom: 0;
+      top: 0;
       opacity: 0.5;
       background-image: url("../img/vector/introsolutions.svg");
       background-repeat: no-repeat;
@@ -53,9 +53,23 @@
       width: 224px;
       height: 224px;
       right: -310px;
-      bottom: -75px;
+      top: 0;
       opacity: 0.5;
       background-image: url("../img/vector/introblog.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--career .page-intro__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 222px;
+      height: 222px;
+      right: -310px;
+      top: 0;
+      opacity: 0.5;
+      background-image: url("../img/vector/introcareer.svg");
       background-repeat: no-repeat;
     }
   }
@@ -95,6 +109,15 @@
       &::after {
         width: 194px;
         height: 194px;
+        top: -225px;
+        left: calc(50% - 105px);
+      }
+    }
+
+    &--career .page-intro__wrapper {
+      &::after {
+        width: 206px;
+        height: 206px;
         top: -225px;
         left: calc(50% - 105px);
       }

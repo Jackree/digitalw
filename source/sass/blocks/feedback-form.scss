@@ -126,10 +126,28 @@
 }
 
 .feedback-form__file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1);
   border: 1px dashed #e3e3e3;
   border-radius: 10px;
+}
+
+.feedback-form__file-text {
+  width: 215px;
+  margin: 0 auto;
+  padding-left: 40px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #bdbdbd;
+
+  background-image: url("../img/vector/formdropbg.svg");
+  background-position: 40px left;
+  background-repeat: no-repeat;
 }
 
 .feedback-from__btn {

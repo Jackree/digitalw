@@ -391,6 +391,17 @@ a {
       font-size: 14px;
       line-height: 17px; } }
 
+@media (max-width: 768px) {
+  .noscroll-nav {
+    overflow: hidden; } }
+
+@media (max-width: 768px) {
+  .under-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; } }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -401,6 +412,9 @@ a {
   z-index: 5;
   padding-top: 38px;
   padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .header {
+      transition: background-color 0.5s, transform 0.5s; } }
   @media (max-width: 768px) {
     .header {
       position: fixed;
@@ -409,6 +423,16 @@ a {
       padding-top: 10px;
       padding-bottom: 10px;
       background-color: rgba(0, 0, 0, 0.5); } }
+  @media (min-width: 768px) {
+    .header--fixed {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transform: translateY(-18px);
+      background-color: rgba(33, 33, 33, 0.5); } }
+  @media (min-width: 768px) {
+    .header--fixed + main {
+      padding-top: 100px; } }
 
 .header__wrapper {
   display: flex;
@@ -417,19 +441,6 @@ a {
 
 .header__burger {
   display: none; }
-  @media (max-width: 768px) {
-    .header__burger {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 35px;
-      height: 35px;
-      background-image: url("../img/vector/burger.svg");
-      background-repeat: no-repeat; } }
-  @media (max-width: 420px) {
-    .header__burger {
-      width: 24px;
-      height: 24px; } }
 
 @media (max-width: 768px) {
   .header__logo {
@@ -443,6 +454,43 @@ a {
 @media (max-width: 768px) {
   .header__nav {
     display: none; } }
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 35px; } }
+
+@media (max-width: 420px) {
+  .burger {
+    width: 24px;
+    height: 24px; } }
+
+.burger__middle,
+.burger__up,
+.burger__down {
+  position: relative;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 16.6%;
+  border-radius: 12.5px;
+  background-color: #fff;
+  transition: all 0.3s; }
+
+.burger--close .burger__middle {
+  width: 0;
+  left: 50%; }
+
+.burger--close .burger__up {
+  transform: rotate(45deg) translateX(17%) translateY(225%);
+  width: calc(100% * 1.30); }
+
+.burger--close .burger__down {
+  transform: rotate(-45deg) translateX(15%) translateY(-225%);
+  width: calc(100% * 1.30); }
 
 .main-nav__list {
   margin: 0;
@@ -494,6 +542,7 @@ a {
       padding-left: 25px;
       padding-bottom: 40px;
       bottom: 0;
+      z-index: 10;
       background-color: #292929;
       color: #ffffff;
       transform: translateX(-190px);
@@ -1249,6 +1298,17 @@ a {
     width: 100%;
     text-align: center; } }
 
+.blog-card__image {
+  width: 100%;
+  max-height: 280px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px; }
+  @media (max-width: 768px) {
+    .blog-card__image {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0; } }
+
 .blog-card__text {
   padding: 30px; }
   @media (max-width: 768px) {
@@ -1445,10 +1505,26 @@ a {
     color: #b3b3b3; }
 
 .feedback-form__file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1);
   border: 1px dashed #e3e3e3;
   border-radius: 10px; }
+
+.feedback-form__file-text {
+  width: 215px;
+  margin: 0 auto;
+  padding-left: 40px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #bdbdbd;
+  background-image: url("../img/vector/formdropbg.svg");
+  background-position: 40px left;
+  background-repeat: no-repeat; }
 
 .feedback-from__btn {
   margin: 0 auto;
@@ -1488,7 +1564,7 @@ a {
     width: 223px;
     height: 223px;
     right: -310px;
-    bottom: -35px;
+    top: 0;
     opacity: 0.5;
     background-image: url("../img/vector/introprojects.svg");
     background-repeat: no-repeat; }
@@ -1498,7 +1574,7 @@ a {
     width: 195px;
     height: 248px;
     right: -310px;
-    bottom: 0;
+    top: 0;
     opacity: 0.5;
     background-image: url("../img/vector/introsolutions.svg");
     background-repeat: no-repeat; }
@@ -1508,9 +1584,19 @@ a {
     width: 224px;
     height: 224px;
     right: -310px;
-    bottom: -75px;
+    top: 0;
     opacity: 0.5;
     background-image: url("../img/vector/introblog.svg");
+    background-repeat: no-repeat; }
+  .page-intro--career .page-intro__wrapper::after {
+    position: absolute;
+    content: "";
+    width: 222px;
+    height: 222px;
+    right: -310px;
+    top: 0;
+    opacity: 0.5;
+    background-image: url("../img/vector/introcareer.svg");
     background-repeat: no-repeat; }
   @media (max-width: 768px) {
     .page-intro {
@@ -1534,6 +1620,11 @@ a {
       .page-intro--blog .page-intro__wrapper::after {
         width: 194px;
         height: 194px;
+        top: -225px;
+        left: calc(50% - 105px); }
+      .page-intro--career .page-intro__wrapper::after {
+        width: 206px;
+        height: 206px;
         top: -225px;
         left: calc(50% - 105px); } }
 
@@ -2052,7 +2143,7 @@ a {
 
 .faq {
   padding-top: 70px;
-  padding-bottom: 170px;
+  padding-bottom: 100px;
   background-color: #ffffff;
   background-image: url("../img/vector/faqbg.svg");
   background-position: top -40px left;
@@ -2103,6 +2194,124 @@ a {
 
 .faq__item--opened > .faq__answer {
   display: block; }
+
+.career {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: url("../img/vector/careerbg.svg") left top -400px/100% 1465px no-repeat; }
+  @media (max-width: 768px) {
+    .career {
+      background-image: none; } }
+
+.career__title {
+  margin-bottom: 70px; }
+
+.career__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px; }
+  @media (max-width: 768px) {
+    .career__list {
+      justify-content: space-around; } }
+
+.career__item {
+  margin-bottom: 30px; }
+
+.career__text {
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center; }
+
+.career__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+  -webkit-background-clip: text;
+          background-clip: text; }
+
+.career-card {
+  min-height: 370px;
+  width: 240px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(143, 95, 220, 0.2);
+  border-radius: 18px; }
+  .career-card--web .career-card__title {
+    background-image: url("../img/vector/careerweb.svg");
+    background-size: 122px 122px;
+    background-position: bottom 25px center; }
+  .career-card--frontend .career-card__title {
+    background-image: url("../img/vector/careerfront.svg");
+    background-size: 106px 106px;
+    background-position: bottom 35px center; }
+  .career-card--manager .career-card__title {
+    background-image: url("../img/vector/careerweb.svg");
+    background-size: 122px 122px;
+    background-position: bottom 25px center; }
+  .career-card--programmer .career-card__title {
+    background-image: url("../img/vector/careerprogram.svg");
+    background-size: 106px 106px;
+    background-position: bottom 35px center; }
+  .career-card--inactive {
+    position: relative;
+    background: #f7f7f7;
+    box-shadow: inset 0px 4px 7px rgba(0, 0, 0, 0.1);
+    filter: grayscale(1); }
+    .career-card--inactive::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      opacity: 0.5; }
+
+.career-card__title {
+  margin: 0;
+  padding-bottom: 170px;
+  font-weight: 500;
+  text-align: center;
+  background-repeat: no-repeat; }
+
+.career-card__salary {
+  margin: 0 0 15px 0;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center; }
+
+.career-card__experience {
+  margin: 0 0 25px 0;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center; }
+
+.career-card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
 
 .footer {
   padding-top: 40px;

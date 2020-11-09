@@ -1,0 +1,51 @@
+.career {
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  background: url("../img/vector/careerbg.svg") left top -400px / 100% 1465px no-repeat;
+
+  @media (max-width: $tabletwidth) {
+    background-image: none;
+  }
+}
+
+.career__title {
+  margin-bottom: 70px;
+}
+
+.career__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+
+  @media (max-width: $tabletwidth) {
+    justify-content: space-around;
+  }
+}
+
+.career__item {
+  margin-bottom: 30px;
+}
+
+.career__text {
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.career__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(220.86deg, #54D6BF 4.06%, #9851DF 90.76%);
+  background-clip: text;
+}
