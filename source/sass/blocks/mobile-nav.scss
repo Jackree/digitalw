@@ -7,7 +7,7 @@
     flex-direction: column;
     position: fixed;
     width: 190px;
-    height: calc(100vh - 62px);
+    height: calc(100vh - 62px - calc(100vh - 100%));
     padding-left: 25px;
     padding-bottom: 40px;
     bottom: 0;
@@ -20,7 +20,7 @@
   }
 
   @media (max-width: $mobilewidth) {
-    height: calc(100vh - 44px);
+    height: calc(100vh - 44px - calc(100vh - 100%));
     top: 44px;
   }
 

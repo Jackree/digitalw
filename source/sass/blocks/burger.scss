@@ -27,16 +27,15 @@
 }
 
 .burger--close .burger__middle {
-  width: 0;
-  left: 50%;
+  opacity: 0;
 }
 
 .burger--close .burger__up {
-  transform: rotate(45deg) translateX(17%) translateY(225%);
+  transform: rotate(-45deg) translateX(-30%) translateY(100%);
   width: calc(100% * 1.30);
 }
 
 .burger--close .burger__down {
-  transform: rotate(-45deg) translateX(15%) translateY(-225%);
+  transform: rotate(45deg) translateX(-30%) translateY(-130%);
   width: calc(100% * 1.30);
 }
